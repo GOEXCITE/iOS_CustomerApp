@@ -7,7 +7,9 @@
 //
 
 #import "CustomerDetailViewController.h"
-#import "CMCustomer.h"
+#import "Brain.h"
+#import "Unities.h"
+#import "CustomerEditViewController.h"
 
 @interface CustomerDetailViewController ()
 
@@ -43,6 +45,35 @@
     self.locationCell.detailTextLabel.text = self.cus.location.length ? self.cus.location : msgIfNoData;
     self.phoneNumberCell.detailTextLabel.text = self.cus.phoneNumber.length ? self.cus.phoneNumber : msgIfNoData;
     self.mailCell.detailTextLabel.text = self.cus.mail.length ? self.cus.mail : msgIfNoData;
+    
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"删除" style:UIBarButtonItemStyleDone target:self action:@selector(removeItem)];
+}
+
+//- (void)removeItem{
+////    __block CMCustomer *tCus = [[VDCustomerList sharedInstance].customerList objectAtIndex:indexPath.row];
+//    [AWSSDBCommunicator updateValueToSDBWithDomainName:DOMAIN_CUSTOMER itemName:self.cus.customerId Key:@"deletedDate" value:[NSDate date].getyyyyMMddhhmmssString withMainThreadExecutor:YES completionBlock:^(BOOL successed){
+//        if (successed) {
+//            NSLog(@"customer %@(id : %@) is deleted!",tCus.customerName,tCus.customerId);
+//            [[VDCustomerList sharedInstance].customerList removeObject:self.cus];
+//            
+//            [self.customerTable deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+//        }
+//    }];
+//}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"EditCustomerDetail"]) {
+        UITableViewCell *cell = [sender isKindOfClass:[UITableViewCell class]] ? sender : nil;
+        if (cell == nil) NSLog(@"sender is incorrect!");
+        if ([cell.textLabel.text isEqualToString:@"性别"]) {
+            return;
+        }
+        CustomerEditViewController *editV = (CustomerEditViewController *)segue.destinationViewController;
+        editV.editingCustomer = self.cus;
+        editV.editTitle = cell.textLabel.text;
+        editV.editValue = cell.detailTextLabel.text;
+    }
 }
 
 @end
