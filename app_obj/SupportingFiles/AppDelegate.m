@@ -23,6 +23,7 @@
     LeftMenuViewController *leftMenu = [[UIStoryboard storyboardWithName:@"iPhoneMain" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
     [SlideNavigationController sharedInstance].leftMenu = leftMenu;
     
+    // test Function
     //! @test AWS
 //    [[NSUserDefaults standardUserDefaults] removeObjectForKey:KEY_USER_TYPE];
 //    [AWSS3Communicator getFileListInS3WithFrefixKey:@"CustomerDataCSV/" executor:[AWSExecutor mainThreadExecutor] completionBlock:nil];
