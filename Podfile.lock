@@ -1,0 +1,52 @@
+PODS:
+  - AWSAutoScaling (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSCognito (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSCore (2.2.1)
+  - AWSLambda (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSMachineLearning (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSMobileAnalytics (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSS3 (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSSimpleDB (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSSNS (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSSQS (2.2.1):
+    - AWSCore (= 2.2.1)
+  - CHCSVParser (2.1.0)
+  - iOS-Slide-Menu (1.4.6)
+
+DEPENDENCIES:
+  - AWSAutoScaling
+  - AWSCognito
+  - AWSCore
+  - AWSLambda
+  - AWSMachineLearning
+  - AWSMobileAnalytics
+  - AWSS3
+  - AWSSimpleDB
+  - AWSSNS
+  - AWSSQS
+  - CHCSVParser
+  - iOS-Slide-Menu
+
+SPEC CHECKSUMS:
+  AWSAutoScaling: 91669a38141a4bd670ec11fbb2edfc7200f73643
+  AWSCognito: 840a78da67d095aed4f197065c0ce5c84991cd11
+  AWSCore: 55eb0d5e85bc1c7a05637957a05a7328be0b06dc
+  AWSLambda: aec56e621b22f32373734b989eaa12cdccd484eb
+  AWSMachineLearning: cc4ac11c6c9c0176a83e36cdceafac4e69b6ff73
+  AWSMobileAnalytics: 5d89d09881b66a549b660c784321fd0b3ba56416
+  AWSS3: 665de364b4a7bfb573660b01a88dc1f71bf5c13d
+  AWSSimpleDB: cd1f7fb83090b63d89b8c635bdcea62525ec9977
+  AWSSNS: 95ed9aa1f9fa8ed48579d4cc7d7beb6ca026f82a
+  AWSSQS: 8d8d3f973d33cfc1a9786c137106d034f8a9a5e8
+  CHCSVParser: 3bcc7bdb72111a31222e95d57eacceefe4e537e8
+  iOS-Slide-Menu: 3a8b157f87694fce888899f169e05b433575ff90
+
+COCOAPODS: 0.37.2
