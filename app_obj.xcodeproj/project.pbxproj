@@ -17,14 +17,14 @@
 		DD1FFD0A1B50BBA800620C7F /* iPhoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1FFD091B50BBA800620C7F /* iPhoneMain.storyboard */; };
 		DD1FFD0C1B50BBBD00620C7F /* iPadMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1FFD0B1B50BBBD00620C7F /* iPadMain.storyboard */; };
 		DD1FFD0F1B50BC6500620C7F /* CustomerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1FFD0E1B50BC6500620C7F /* CustomerListViewController.m */; };
+		DD20400F1B5BE3C8007D706B /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD20400E1B5BE3C8007D706B /* SearchResultTableViewController.m */; };
+		DD2040121B5BF1EA007D706B /* CustomerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2040111B5BF1EA007D706B /* CustomerEditViewController.m */; };
 		DD2F5E851B50CC2100C020E1 /* CustomerAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E841B50CC2100C020E1 /* CustomerAddViewController.m */; };
 		DD2F5E881B50CCE900C020E1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E871B50CCE900C020E1 /* LoginViewController.m */; };
 		DD2F5E8A1B50D2FC00C020E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2F5E891B50D2FC00C020E1 /* Images.xcassets */; };
 		DD2F5E8E1B50DEA200C020E1 /* UIColor+CMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E8D1B50DEA200C020E1 /* UIColor+CMExtension.m */; };
 		DD2F5E911B50E9E600C020E1 /* CSVListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E901B50E9E600C020E1 /* CSVListViewController.m */; };
 		DD87410E1B54014300FB5DEA /* Unities.m in Sources */ = {isa = PBXBuildFile; fileRef = DD87410D1B54014300FB5DEA /* Unities.m */; };
-		DDE263D71B56AB1A00DC068A /* SearchTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE263D51B56AB1A00DC068A /* SearchTableCell.m */; };
-		DDE263D81B56AB1A00DC068A /* SearchTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDE263D61B56AB1A00DC068A /* SearchTableCell.xib */; };
 		DDF1280E1B51EEA200AF298A /* CMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF1280D1B51EEA200AF298A /* CMUser.m */; };
 		DDF128111B51EEB400AF298A /* CMCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF128101B51EEB400AF298A /* CMCustomer.m */; };
 		DDF128141B51EEC600AF298A /* CMCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF128131B51EEC600AF298A /* CMCSV.m */; };
@@ -67,6 +67,10 @@
 		DD1FFD0B1B50BBBD00620C7F /* iPadMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPadMain.storyboard; path = Storyboards/iPadMain.storyboard; sourceTree = "<group>"; };
 		DD1FFD0D1B50BC6500620C7F /* CustomerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerListViewController.h; path = ViewControllers/CustomerListViewController.h; sourceTree = "<group>"; };
 		DD1FFD0E1B50BC6500620C7F /* CustomerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerListViewController.m; path = ViewControllers/CustomerListViewController.m; sourceTree = "<group>"; };
+		DD20400D1B5BE3C8007D706B /* SearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultTableViewController.h; path = ViewControllers/SearchResultTableViewController.h; sourceTree = "<group>"; };
+		DD20400E1B5BE3C8007D706B /* SearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultTableViewController.m; path = ViewControllers/SearchResultTableViewController.m; sourceTree = "<group>"; };
+		DD2040101B5BF1EA007D706B /* CustomerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerEditViewController.h; path = ViewControllers/CustomerEditViewController.h; sourceTree = "<group>"; };
+		DD2040111B5BF1EA007D706B /* CustomerEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerEditViewController.m; path = ViewControllers/CustomerEditViewController.m; sourceTree = "<group>"; };
 		DD2F5E831B50CC2100C020E1 /* CustomerAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerAddViewController.h; path = ViewControllers/CustomerAddViewController.h; sourceTree = "<group>"; };
 		DD2F5E841B50CC2100C020E1 /* CustomerAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerAddViewController.m; path = ViewControllers/CustomerAddViewController.m; sourceTree = "<group>"; };
 		DD2F5E861B50CCE900C020E1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
@@ -78,9 +82,6 @@
 		DD2F5E901B50E9E600C020E1 /* CSVListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSVListViewController.m; path = ViewControllers/CSVListViewController.m; sourceTree = "<group>"; };
 		DD87410C1B54014300FB5DEA /* Unities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unities.h; path = Unities/Unities.h; sourceTree = "<group>"; };
 		DD87410D1B54014300FB5DEA /* Unities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unities.m; path = Unities/Unities.m; sourceTree = "<group>"; };
-		DDE263D41B56AB1A00DC068A /* SearchTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchTableCell.h; path = ViewControllers/SearchTableCell.h; sourceTree = "<group>"; };
-		DDE263D51B56AB1A00DC068A /* SearchTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTableCell.m; path = ViewControllers/SearchTableCell.m; sourceTree = "<group>"; };
-		DDE263D61B56AB1A00DC068A /* SearchTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchTableCell.xib; path = ViewControllers/SearchTableCell.xib; sourceTree = "<group>"; };
 		DDF1280C1B51EEA200AF298A /* CMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMUser.h; path = Backsystem/AWS/Models/CMUser.h; sourceTree = "<group>"; };
 		DDF1280D1B51EEA200AF298A /* CMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMUser.m; path = Backsystem/AWS/Models/CMUser.m; sourceTree = "<group>"; };
 		DDF1280F1B51EEB400AF298A /* CMCustomer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCustomer.h; path = Backsystem/AWS/Models/CMCustomer.h; sourceTree = "<group>"; };
@@ -216,11 +217,12 @@
 				DDFD77771B529EA100AACA0E /* LeftMenuViewController.m */,
 				DD1FFD0D1B50BC6500620C7F /* CustomerListViewController.h */,
 				DD1FFD0E1B50BC6500620C7F /* CustomerListViewController.m */,
-				DDE263D41B56AB1A00DC068A /* SearchTableCell.h */,
-				DDE263D51B56AB1A00DC068A /* SearchTableCell.m */,
-				DDE263D61B56AB1A00DC068A /* SearchTableCell.xib */,
+				DD20400D1B5BE3C8007D706B /* SearchResultTableViewController.h */,
+				DD20400E1B5BE3C8007D706B /* SearchResultTableViewController.m */,
 				DDFD77731B529E8C00AACA0E /* CustomerDetailViewController.h */,
 				DDFD77741B529E8C00AACA0E /* CustomerDetailViewController.m */,
+				DD2040101B5BF1EA007D706B /* CustomerEditViewController.h */,
+				DD2040111B5BF1EA007D706B /* CustomerEditViewController.m */,
 				DD2F5E831B50CC2100C020E1 /* CustomerAddViewController.h */,
 				DD2F5E841B50CC2100C020E1 /* CustomerAddViewController.m */,
 				DD2F5E8F1B50E9E600C020E1 /* CSVListViewController.h */,
@@ -411,7 +413,6 @@
 				DD1FFD001B50BA6000620C7F /* Images.xcassets in Resources */,
 				DD1FFD0C1B50BBBD00620C7F /* iPadMain.storyboard in Resources */,
 				DD2F5E8A1B50D2FC00C020E1 /* Images.xcassets in Resources */,
-				DDE263D81B56AB1A00DC068A /* SearchTableCell.xib in Resources */,
 				DD1FFD061B50BA9900620C7F /* Info.plist in Resources */,
 				DD1FFCE71B50B9C100620C7F /* LaunchScreen.xib in Resources */,
 			);
@@ -472,10 +473,11 @@
 				DD87410E1B54014300FB5DEA /* Unities.m in Sources */,
 				DD1FFCFE1B50BA0700620C7F /* AppDelegate.m in Sources */,
 				DDFD77751B529E8C00AACA0E /* CustomerDetailViewController.m in Sources */,
+				DD2040121B5BF1EA007D706B /* CustomerEditViewController.m in Sources */,
 				DDF128141B51EEC600AF298A /* CMCSV.m in Sources */,
 				DD2F5E881B50CCE900C020E1 /* LoginViewController.m in Sources */,
+				DD20400F1B5BE3C8007D706B /* SearchResultTableViewController.m in Sources */,
 				DDF128291B52048D00AF298A /* AWSClients.m in Sources */,
-				DDE263D71B56AB1A00DC068A /* SearchTableCell.m in Sources */,
 				DD2F5E8E1B50DEA200C020E1 /* UIColor+CMExtension.m in Sources */,
 				DDF128331B52082C00AF298A /* AWSS3Communicator.m in Sources */,
 				DDF128111B51EEB400AF298A /* CMCustomer.m in Sources */,

@@ -23,34 +23,6 @@
     LeftMenuViewController *leftMenu = [[UIStoryboard storyboardWithName:@"iPhoneMain" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
     [SlideNavigationController sharedInstance].leftMenu = leftMenu;
     
-    // test Function
-    //! @test AWS
-//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:KEY_USER_TYPE];
-//    [AWSS3Communicator getFileListInS3WithFrefixKey:@"CustomerDataCSV/" executor:[AWSExecutor mainThreadExecutor] completionBlock:nil];
-//    AWSStaticCredentialsProvider *c = [[AWSStaticCredentialsProvider alloc] initWithAccessKey:ACCESS_KEY_ID secretKey:SECRET_KEY];
-//    AWSServiceConfiguration *congifuration = [[AWSServiceConfiguration alloc] initWithRegion:S3RegionType() credentialsProvider:c];
-//    [AWSS3TransferManager registerS3TransferManagerWithConfiguration:congifuration forKey:@"s3Mgr_tokyo"];
-//    
-//    AWSS3TransferManagerDownloadRequest *downReq = [AWSS3TransferManagerDownloadRequest new];
-//    downReq.key = @"CustomerDataCSV/aaa.txt";
-//    downReq.bucket = @"japan.travel";
-//    [[[AWSS3TransferManager S3TransferManagerForKey:@"s3Mgr_tokyo"] download:downReq] continueWithExecutor:[AWSExecutor mainThreadExecutor] withBlock:^id(AWSTask *task) {
-//        if (task.error != nil){
-//            if(task.error.code != AWSS3TransferManagerErrorCancelled && task.error.code != AWSS3TransferManagerErrorPaused){
-//                NSLog(@"%s Error: [%@]",__PRETTY_FUNCTION__, task.error);
-//            }
-//        } else {
-//            //            downloadCount++;
-//            AWSS3TransferManagerDownloadOutput *result = task.result;
-//            NSData *bodyData = [NSData dataWithContentsOfURL:result.body];
-//            if (bodyData && bodyData.length>0) {
-//                NSLog(@"successful!");
-//            }
-//            return task;
-//        }
-//        return nil;
-//    }];
-    
     return YES;
 }
 

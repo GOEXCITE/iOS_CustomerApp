@@ -12,6 +12,6 @@
 
 @interface CustomerDetailViewController : UITableViewController
 
-@property (nonatomic , strong) CMCustomer   *cus;
+@property (nonatomic , weak) CMCustomer   *cus;
 
 @end
