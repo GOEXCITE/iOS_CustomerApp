@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6B23FE6FFE49EAC8064E8FB2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFE1DDA3D94A57693C0D0F6 /* libPods.a */; };
+		CAB2795D1BC37A8400EE1C6B /* iPhoneWelcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB2795C1BC37A8400EE1C6B /* iPhoneWelcome.storyboard */; settings = {ASSET_TAGS = (); }; };
+		CAB279601BC37DB500EE1C6B /* CustomerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB2795F1BC37DB500EE1C6B /* CustomerListViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DD1FFCE71B50B9C100620C7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1FFCE51B50B9C100620C7F /* LaunchScreen.xib */; };
 		DD1FFCF31B50B9C100620C7F /* app_objTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1FFCF21B50B9C100620C7F /* app_objTests.m */; };
 		DD1FFCFE1B50BA0700620C7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1FFCFD1B50BA0700620C7F /* AppDelegate.m */; };
 		DD1FFD001B50BA6000620C7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1FFCFF1B50BA6000620C7F /* Images.xcassets */; };
 		DD1FFD041B50BA6E00620C7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1FFD031B50BA6E00620C7F /* main.m */; };
-		DD1FFD061B50BA9900620C7F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD1FFD051B50BA9900620C7F /* Info.plist */; };
 		DD1FFD0A1B50BBA800620C7F /* iPhoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1FFD091B50BBA800620C7F /* iPhoneMain.storyboard */; };
 		DD1FFD0C1B50BBBD00620C7F /* iPadMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1FFD0B1B50BBBD00620C7F /* iPadMain.storyboard */; };
-		DD1FFD0F1B50BC6500620C7F /* CustomerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1FFD0E1B50BC6500620C7F /* CustomerListViewController.m */; };
 		DD20400F1B5BE3C8007D706B /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD20400E1B5BE3C8007D706B /* SearchResultTableViewController.m */; };
 		DD2040121B5BF1EA007D706B /* CustomerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2040111B5BF1EA007D706B /* CustomerEditViewController.m */; };
 		DD2F5E851B50CC2100C020E1 /* CustomerAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E841B50CC2100C020E1 /* CustomerAddViewController.m */; };
@@ -36,7 +36,6 @@
 		DDF128481B520E8100AF298A /* VDCustomerList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF128471B520E8100AF298A /* VDCustomerList.m */; };
 		DDF1284B1B52103600AF298A /* CMCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF1284A1B52103600AF298A /* CMCSVParser.m */; };
 		DDFD77751B529E8C00AACA0E /* CustomerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFD77741B529E8C00AACA0E /* CustomerDetailViewController.m */; };
-		DDFD77781B529EA100AACA0E /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFD77771B529EA100AACA0E /* LeftMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +52,9 @@
 		1AFE1DDA3D94A57693C0D0F6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		26595623750DCC8C77DF3037 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C25DA0A98E6EBA38211CE542 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CAB2795C1BC37A8400EE1C6B /* iPhoneWelcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhoneWelcome.storyboard; path = Storyboards/iPhoneWelcome.storyboard; sourceTree = "<group>"; };
+		CAB2795E1BC37DB500EE1C6B /* CustomerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerListViewController.h; sourceTree = "<group>"; };
+		CAB2795F1BC37DB500EE1C6B /* CustomerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerListViewController.m; sourceTree = "<group>"; };
 		DD1FFCD31B50B9C100620C7F /* app_obj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app_obj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1FFCE61B50B9C100620C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DD1FFCEC1B50B9C100620C7F /* app_objTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_objTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +67,6 @@
 		DD1FFD051B50BA9900620C7F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD1FFD091B50BBA800620C7F /* iPhoneMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhoneMain.storyboard; path = Storyboards/iPhoneMain.storyboard; sourceTree = "<group>"; };
 		DD1FFD0B1B50BBBD00620C7F /* iPadMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPadMain.storyboard; path = Storyboards/iPadMain.storyboard; sourceTree = "<group>"; };
-		DD1FFD0D1B50BC6500620C7F /* CustomerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerListViewController.h; path = ViewControllers/CustomerListViewController.h; sourceTree = "<group>"; };
-		DD1FFD0E1B50BC6500620C7F /* CustomerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerListViewController.m; path = ViewControllers/CustomerListViewController.m; sourceTree = "<group>"; };
 		DD20400D1B5BE3C8007D706B /* SearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultTableViewController.h; path = ViewControllers/SearchResultTableViewController.h; sourceTree = "<group>"; };
 		DD20400E1B5BE3C8007D706B /* SearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultTableViewController.m; path = ViewControllers/SearchResultTableViewController.m; sourceTree = "<group>"; };
 		DD2040101B5BF1EA007D706B /* CustomerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerEditViewController.h; path = ViewControllers/CustomerEditViewController.h; sourceTree = "<group>"; };
@@ -105,8 +105,6 @@
 		DDF1284A1B52103600AF298A /* CMCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCSVParser.m; path = VirtualGirl/BrainController/CMCSVParser.m; sourceTree = "<group>"; };
 		DDFD77731B529E8C00AACA0E /* CustomerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerDetailViewController.h; path = ViewControllers/CustomerDetailViewController.h; sourceTree = "<group>"; };
 		DDFD77741B529E8C00AACA0E /* CustomerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerDetailViewController.m; path = ViewControllers/CustomerDetailViewController.m; sourceTree = "<group>"; };
-		DDFD77761B529EA100AACA0E /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuViewController.h; path = ViewControllers/LeftMenuViewController.h; sourceTree = "<group>"; };
-		DDFD77771B529EA100AACA0E /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuViewController.m; path = ViewControllers/LeftMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				DD1FFD091B50BBA800620C7F /* iPhoneMain.storyboard */,
+				CAB2795C1BC37A8400EE1C6B /* iPhoneWelcome.storyboard */,
 				DD1FFD101B50BC6900620C7F /* ViewControllers */,
 				DD2F5E961B51676E00C020E1 /* VirtualSmartGirl */,
 				DD2F5E921B5166BC00C020E1 /* BackSystem */,
@@ -213,10 +212,8 @@
 		DD1FFD101B50BC6900620C7F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				DDFD77761B529EA100AACA0E /* LeftMenuViewController.h */,
-				DDFD77771B529EA100AACA0E /* LeftMenuViewController.m */,
-				DD1FFD0D1B50BC6500620C7F /* CustomerListViewController.h */,
-				DD1FFD0E1B50BC6500620C7F /* CustomerListViewController.m */,
+				CAB2795E1BC37DB500EE1C6B /* CustomerListViewController.h */,
+				CAB2795F1BC37DB500EE1C6B /* CustomerListViewController.m */,
 				DD20400D1B5BE3C8007D706B /* SearchResultTableViewController.h */,
 				DD20400E1B5BE3C8007D706B /* SearchResultTableViewController.m */,
 				DDFD77731B529E8C00AACA0E /* CustomerDetailViewController.h */,
@@ -373,7 +370,7 @@
 		DD1FFCCB1B50B9C100620C7F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = goexcite.net;
 				TargetAttributes = {
 					DD1FFCD21B50B9C100620C7F = {
@@ -413,8 +410,8 @@
 				DD1FFD001B50BA6000620C7F /* Images.xcassets in Resources */,
 				DD1FFD0C1B50BBBD00620C7F /* iPadMain.storyboard in Resources */,
 				DD2F5E8A1B50D2FC00C020E1 /* Images.xcassets in Resources */,
-				DD1FFD061B50BA9900620C7F /* Info.plist in Resources */,
 				DD1FFCE71B50B9C100620C7F /* LaunchScreen.xib in Resources */,
+				CAB2795D1BC37A8400EE1C6B /* iPhoneWelcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +462,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD1FFD0F1B50BC6500620C7F /* CustomerListViewController.m in Sources */,
 				DD2F5E911B50E9E600C020E1 /* CSVListViewController.m in Sources */,
 				DD2F5E851B50CC2100C020E1 /* CustomerAddViewController.m in Sources */,
 				DDF128411B520E1500AF298A /* VDOwner.m in Sources */,
@@ -477,6 +473,7 @@
 				DDF128141B51EEC600AF298A /* CMCSV.m in Sources */,
 				DD2F5E881B50CCE900C020E1 /* LoginViewController.m in Sources */,
 				DD20400F1B5BE3C8007D706B /* SearchResultTableViewController.m in Sources */,
+				CAB279601BC37DB500EE1C6B /* CustomerListViewController.m in Sources */,
 				DDF128291B52048D00AF298A /* AWSClients.m in Sources */,
 				DD2F5E8E1B50DEA200C020E1 /* UIColor+CMExtension.m in Sources */,
 				DDF128331B52082C00AF298A /* AWSS3Communicator.m in Sources */,
@@ -485,7 +482,6 @@
 				DDF128451B520E2600AF298A /* Brain.m in Sources */,
 				DDF128481B520E8100AF298A /* VDCustomerList.m in Sources */,
 				DDF1280E1B51EEA200AF298A /* CMUser.m in Sources */,
-				DDFD77781B529EA100AACA0E /* LeftMenuViewController.m in Sources */,
 				DD1FFD041B50BA6E00620C7F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +537,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -559,7 +556,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos8.4;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -596,7 +593,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos8.4;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -609,7 +606,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = app_obj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.goexcite.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -620,7 +619,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = app_obj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.goexcite.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -638,6 +639,7 @@
 				);
 				INFOPLIST_FILE = app_objTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.goexcite.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/app_obj.app/app_obj";
 			};
@@ -653,6 +655,7 @@
 				);
 				INFOPLIST_FILE = app_objTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.goexcite.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/app_obj.app/app_obj";
 			};

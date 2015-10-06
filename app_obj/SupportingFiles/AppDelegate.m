@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "SlideNavigationController.h"
-#import "LeftMenuViewController.h"
 
 #import "Brain.h"
 
@@ -20,9 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    LeftMenuViewController *leftMenu = [[UIStoryboard storyboardWithName:@"iPhoneMain" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
-    [SlideNavigationController sharedInstance].leftMenu = leftMenu;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    // Set the initial view controller to be the root view controller of the window object
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"iPhoneMain" bundle:nil];
+    UIViewController *initialViewController = storyBoard.instantiateInitialViewController;
+    self.window.rootViewController  = initialViewController;
+    
+    // Set the window object to be the key window and show it
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

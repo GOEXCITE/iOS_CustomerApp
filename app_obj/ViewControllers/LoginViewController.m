@@ -7,7 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import "SlideNavigationController.h"
 
 #import "Brain.h"
 

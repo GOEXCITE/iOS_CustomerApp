@@ -9,6 +9,7 @@
 #import "CSVListViewController.h"
 #import "Brain.h"
 #import "Unities.h"
+#import "UIColor+CMExtension.h"
 
 //#define csvFilePath         @"file:///Users/tiantian/Desktop/sam.csv"
 @interface CSVListViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -19,6 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor tm2_StandardBlue];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectZero];
+    title.font = [UIFont boldSystemFontOfSize:16.0];
+    title.textColor = [UIColor whiteColor];
+    title.text = @"顾客列表";
+    [title sizeToFit];
+    self.navigationItem.titleView = title;
+    
     [AWSS3Communicator getFileListInS3WithFrefixKey:@"CustomerDataCSV/" executor:[AWSExecutor mainThreadExecutor] completionBlock:^(NSArray *csvFileList){
         self.csvFileList = csvFileList;
         [self.csvTable reloadData];
