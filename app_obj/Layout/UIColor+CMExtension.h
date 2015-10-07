@@ -12,4 +12,6 @@
 
 + (UIColor *)cm_StandardBlue;
 
++ (UIColor *)tm2_StandardBlue;
+
 @end

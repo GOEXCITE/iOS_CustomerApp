@@ -323,6 +323,11 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
                 uploadPartRequest.body = tempURL;
                 uploadPartRequest.contentLength = @(dataLength);
                 uploadPartRequest.uploadId = output.uploadId?output.uploadId:uploadRequest.uploadId;
+                
+                //pass SSE Value
+                uploadPartRequest.SSECustomerAlgorithm = uploadRequest.SSECustomerAlgorithm;
+                uploadPartRequest.SSECustomerKey = uploadRequest.SSECustomerKey;
+                uploadPartRequest.SSECustomerKeyMD5 = uploadRequest.SSECustomerKeyMD5;
 
                 uploadRequest.currentUploadingPart = uploadPartRequest; //retain the current uploading parts for cancel/pause purpose
 
@@ -573,7 +578,8 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         }
         
         //If task complete without error, move the completed file to originalFileURL
-        if (tempFileURL && originalFileURL) {
+        BOOL isTempFileExists = [[NSFileManager defaultManager] fileExistsAtPath:tempFileURL.path];
+        if (isTempFileExists && originalFileURL) {
             NSError *error = nil;
             //delete the orginalFileURL if it already exists
             if ([[NSFileManager defaultManager] fileExistsAtPath:originalFileURL.path]) {
@@ -592,10 +598,13 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         if (task.result) {
             AWSS3GetObjectOutput *getObjectOutput = task.result;
             
-            //set the body to originalFileURL
-            getObjectOutput.body = downloadRequest.originalFileURL;
-            
             [downloadOutput aws_copyPropertiesFromObject:getObjectOutput];
+            
+            //set the body to originalFileURL only if tempFileExists(file has been downloaded successfully)
+            if (isTempFileExists) {
+                downloadOutput.body = downloadRequest.originalFileURL;
+            }
+
         }
         
         downloadRequest.state = AWSS3TransferManagerRequestStateCompleted;

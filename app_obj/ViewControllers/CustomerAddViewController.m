@@ -7,10 +7,10 @@
 //
 
 #import "CustomerAddViewController.h"
-#import "SlideNavigationController.h"
 
 #import "Unities.h"
 #import "Brain.h"
+#import "UIColor+CMExtension.h"
 //#import "CMCustomer.h"
 //#import "AWSSDBCommunicator.h"
 
@@ -34,6 +34,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor tm2_StandardBlue];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectZero];
+    title.font = [UIFont boldSystemFontOfSize:16.0];
+    title.textColor = [UIColor whiteColor];
+    title.text = @"顾客列表";
+    [title sizeToFit];
+    self.navigationItem.titleView = title;
 }
 
 - (BOOL)slideNavigationControllerShouldDisplayLeftMenu{
@@ -51,7 +60,7 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     if (textField == self.birthField) {
         NSInteger age = [NSDate date].getyyyy.integerValue - [self.birthField.text substringToIndex:4].integerValue;
-        self.ageField.text = [NSString stringWithFormat:@"%d",age];
+        self.ageField.text = [NSString stringWithFormat:@"%ld",(long)age];
     }else if (textField == self.ageField){
         NSString *frontPart = [NSString stringWithFormat:@"%d",[NSDate date].getyyyy.integerValue-self.ageField.text.integerValue];
         NSString *backPart = self.birthField.text.length==10 ? [self.birthField.text substringFromIndex:4] : @"/--/--";
@@ -90,9 +99,9 @@
             [alert show];
             
             UIViewController *vc = [[UIStoryboard storyboardWithName:@"iPhoneMain" bundle: nil] instantiateViewControllerWithIdentifier: @"CustomerListViewController"];
-            [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
-                                                                     withSlideOutAnimation:YES
-                                                                             andCompletion:nil];
+//            [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
+//                                                                     withSlideOutAnimation:YES
+//                                                                             andCompletion:nil];
         }];
     }];
     
