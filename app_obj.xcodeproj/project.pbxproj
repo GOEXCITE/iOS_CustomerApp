@@ -24,7 +24,6 @@
 		DD2040121B5BF1EA007D706B /* CustomerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2040111B5BF1EA007D706B /* CustomerEditViewController.m */; };
 		DD2F5E851B50CC2100C020E1 /* CustomerAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E841B50CC2100C020E1 /* CustomerAddViewController.m */; };
 		DD2F5E881B50CCE900C020E1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E871B50CCE900C020E1 /* LoginViewController.m */; };
-		DD2F5E8A1B50D2FC00C020E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2F5E891B50D2FC00C020E1 /* Images.xcassets */; };
 		DD2F5E8E1B50DEA200C020E1 /* UIColor+CMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E8D1B50DEA200C020E1 /* UIColor+CMExtension.m */; };
 		DD2F5E911B50E9E600C020E1 /* CSVListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E901B50E9E600C020E1 /* CSVListViewController.m */; };
 		DD87410E1B54014300FB5DEA /* Unities.m in Sources */ = {isa = PBXBuildFile; fileRef = DD87410D1B54014300FB5DEA /* Unities.m */; };
@@ -83,7 +82,6 @@
 		DD2F5E841B50CC2100C020E1 /* CustomerAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerAddViewController.m; path = ViewControllers/CustomerAddViewController.m; sourceTree = "<group>"; };
 		DD2F5E861B50CCE900C020E1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
 		DD2F5E871B50CCE900C020E1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/LoginViewController.m; sourceTree = "<group>"; };
-		DD2F5E891B50D2FC00C020E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resource/Images.xcassets; sourceTree = "<group>"; };
 		DD2F5E8C1B50DEA200C020E1 /* UIColor+CMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+CMExtension.h"; path = "Layout/UIColor+CMExtension.h"; sourceTree = "<group>"; };
 		DD2F5E8D1B50DEA200C020E1 /* UIColor+CMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CMExtension.m"; path = "Layout/UIColor+CMExtension.m"; sourceTree = "<group>"; };
 		DD2F5E8F1B50E9E600C020E1 /* CSVListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSVListViewController.h; path = ViewControllers/CSVListViewController.h; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 				DD1FFCFD1B50BA0700620C7F /* AppDelegate.m */,
 				DD1FFD051B50BA9900620C7F /* Info.plist */,
 				DD1FFD031B50BA6E00620C7F /* main.m */,
-				DD2F5E891B50D2FC00C020E1 /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -431,7 +428,6 @@
 				DD1FFD0A1B50BBA800620C7F /* iPhoneMain.storyboard in Resources */,
 				DD1FFD001B50BA6000620C7F /* Images.xcassets in Resources */,
 				DD1FFD0C1B50BBBD00620C7F /* iPadMain.storyboard in Resources */,
-				DD2F5E8A1B50D2FC00C020E1 /* Images.xcassets in Resources */,
 				DD1FFCE71B50B9C100620C7F /* LaunchScreen.xib in Resources */,
 				CAB2795D1BC37A8400EE1C6B /* iPhoneWelcome.storyboard in Resources */,
 			);
