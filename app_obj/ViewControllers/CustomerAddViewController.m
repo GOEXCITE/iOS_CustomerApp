@@ -62,7 +62,7 @@
         NSInteger age = [NSDate date].getyyyy.integerValue - [self.birthField.text substringToIndex:4].integerValue;
         self.ageField.text = [NSString stringWithFormat:@"%ld",(long)age];
     }else if (textField == self.ageField){
-        NSString *frontPart = [NSString stringWithFormat:@"%d",[NSDate date].getyyyy.integerValue-self.ageField.text.integerValue];
+        NSString *frontPart = [NSString stringWithFormat:@"%ld",[NSDate date].getyyyy.integerValue-self.ageField.text.integerValue];
         NSString *backPart = self.birthField.text.length==10 ? [self.birthField.text substringFromIndex:4] : @"/--/--";
         
         self.birthField.text = [frontPart stringByAppendingString:backPart];

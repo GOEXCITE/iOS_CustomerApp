@@ -34,8 +34,10 @@
     
     
     [[DropboxManager shared] setAutoUnlinkSessions:YES];
-    [[DropboxManager shared] linkSessionAndShow];
-    
+//    [[DropboxManager shared] linkSessionAndShow];
+    if (![[DBSession sharedSession] isLinked]) {
+        [[DBSession sharedSession] linkFromController:self.navigationController];
+    }
     
 //    [AWSS3Communicator getFileListInS3WithFrefixKey:@"CustomerDataCSV/" executor:[AWSExecutor mainThreadExecutor] completionBlock:^(NSArray *csvFileList){
 //        self.csvFileList = csvFileList;
