@@ -10,8 +10,16 @@
 
 #import "Brain.h"
 
-@interface AppDelegate ()
+#import "DropboxManager.h"
 
+//<key>NSAppTransportSecurity</key>
+//<dict>
+//<key>NSAllowsArbitraryLoads</key>
+//<true/>
+//</dict>
+
+@interface AppDelegate () <DBRestClientDelegate>
+@property (nonatomic, strong) DBRestClient  *restClient;
 @end
 
 @implementation AppDelegate
@@ -19,6 +27,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    DBSession *dbSession = [[DBSession alloc]
+                            initWithAppKey:DROPBOX_APP_KEY
+                            appSecret:DROPBOX_APP_SECRET
+                            root:kDBRootDropbox]; // either kDBRootAppFolder or kDBRootDropbox
+    [DBSession setSharedSession:dbSession];
     
     // Set the initial view controller to be the root view controller of the window object
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"iPhoneMain" bundle:nil];
@@ -30,26 +44,34 @@
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    NSLog(@"%@",url);
+    if ([[DBSession sharedSession] handleOpenURL:url]) {
+        if ([[DBSession sharedSession] isLinked]) {
+            NSLog(@"App linked successfully!");
+            // At this point you can start making API calls
+            self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+            self.restClient.delegate = self;
+            [self.restClient loadMetadata:@"/"];
+            
+        }
+        return YES;
+    }
+    return NO;
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
+    if (metadata.isDirectory) {
+        NSLog(@"Folder '%@' contains:", metadata.path);
+        for (DBMetadata *file in metadata.contents) {
+            NSLog(@"	%@", file.filename);
+        }
+    }
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+- (void)restClient:(DBRestClient *)client
+loadMetadataFailedWithError:(NSError *)error {
+    NSLog(@"Error loading metadata: %@", error);
 }
 
 @end
