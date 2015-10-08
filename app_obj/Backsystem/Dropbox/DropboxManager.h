@@ -10,8 +10,8 @@
 
 #import <DropboxSDK/DropboxSDK.h>
 
-#define DROPBOX_APP_KEY         @"hk37pzci0h7d0e5"
-#define DROPBOX_APP_SECRET      @"38v874z4oat5j4w"
+#define DROPBOX_APP_KEY         @"it9wsxfduroa9k2"
+#define DROPBOX_APP_SECRET      @"bw7k32ftuohpizn"
 
 @interface DropboxManager : NSObject <DBSessionDelegate,DBNetworkRequestDelegate,DBRestClientDelegate>
 
