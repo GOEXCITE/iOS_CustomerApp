@@ -44,7 +44,7 @@
 - (instancetype)init{
     self = [super init];
     if (!self) return nil;
-    [self startDropboxSession];
+//    [self startDropboxSession];
     return self;
 }
 
@@ -64,7 +64,7 @@
 - (void)startDropboxSession{
     NSString* appKey = DROPBOX_APP_KEY;
     NSString* appSecret = DROPBOX_APP_SECRET;
-    NSString *root = kDBRootDropbox; // Should be set to either kDBRootAppFolder or kDBRootDropbox
+    NSString *root = kDBRootAppFolder; // Should be set to either kDBRootAppFolder or kDBRootDropbox
     // You can determine if you have App folder access or Full Dropbox along with your consumer key/secret
     // from https://dropbox.com/developers/apps
     
