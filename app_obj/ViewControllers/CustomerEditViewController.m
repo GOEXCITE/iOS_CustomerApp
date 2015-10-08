@@ -66,7 +66,7 @@
     }else if ([self.titleLabel.text isEqualToString:@"年龄"]) {
         self.editingCustomer.age = self.editField.text;
         
-        NSString *frontPart = [NSString stringWithFormat:@"%ld",[NSDate date].getyyyy.integerValue-self.editField.text.integerValue];
+        NSString *frontPart = [NSString stringWithFormat:@"%d",[NSDate date].getyyyy.integerValue-self.editField.text.integerValue];
         NSString *backPart = self.editingCustomer.birth.length==10 ? [self.editingCustomer.birth substringFromIndex:4] : @"/--/--";
         self.editingCustomer.birth = [frontPart stringByAppendingString:backPart];
     }else if ([self.titleLabel.text isEqualToString:@"护照号码"]) {

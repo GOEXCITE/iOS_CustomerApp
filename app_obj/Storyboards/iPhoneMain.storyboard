@@ -595,7 +595,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KnG-Ty-SEu">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="9Sv-Uy-0SL"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="9Sv-Uy-0SL">
+                            <connections>
+                                <action selector="refreshCSVList:" destination="vIb-UJ-ZaZ" id="jBY-xV-OXU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="读取" id="mIa-Bh-l5Q">
                             <connections>
                                 <action selector="saveCSVToSDB:" destination="vIb-UJ-ZaZ" id="oM5-6R-fYe"/>

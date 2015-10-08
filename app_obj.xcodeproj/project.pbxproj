@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6B23FE6FFE49EAC8064E8FB2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFE1DDA3D94A57693C0D0F6 /* libPods.a */; };
 		CA1FE7DD1BC6053700E49359 /* CMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1FE7DC1BC6053700E49359 /* CMLog.m */; settings = {ASSET_TAGS = (); }; };
-		CA1FE7E41BC605EF00E49359 /* DropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1FE7E31BC605EF00E49359 /* DropboxManager.m */; settings = {ASSET_TAGS = (); }; };
 		CAA6766D1BC60B4600696ACD /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA6766C1BC60B4600696ACD /* DropboxSDK.framework */; settings = {ASSET_TAGS = (); }; };
 		CAB2795D1BC37A8400EE1C6B /* iPhoneWelcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB2795C1BC37A8400EE1C6B /* iPhoneWelcome.storyboard */; settings = {ASSET_TAGS = (); }; };
 		CAB279601BC37DB500EE1C6B /* CustomerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB2795F1BC37DB500EE1C6B /* CustomerListViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -56,8 +55,6 @@
 		C25DA0A98E6EBA38211CE542 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA1FE7DB1BC6053700E49359 /* CMLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMLog.h; path = Backsystem/AWS/Models/CMLog.h; sourceTree = "<group>"; };
 		CA1FE7DC1BC6053700E49359 /* CMLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMLog.m; path = Backsystem/AWS/Models/CMLog.m; sourceTree = "<group>"; };
-		CA1FE7E21BC605EF00E49359 /* DropboxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropboxManager.h; path = Backsystem/Dropbox/DropboxManager.h; sourceTree = "<group>"; };
-		CA1FE7E31BC605EF00E49359 /* DropboxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropboxManager.m; path = Backsystem/Dropbox/DropboxManager.m; sourceTree = "<group>"; };
 		CAA6766C1BC60B4600696ACD /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		CAB2795C1BC37A8400EE1C6B /* iPhoneWelcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhoneWelcome.storyboard; path = Storyboards/iPhoneWelcome.storyboard; sourceTree = "<group>"; };
 		CAB2795E1BC37DB500EE1C6B /* CustomerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerListViewController.h; sourceTree = "<group>"; };
@@ -149,15 +146,6 @@
 				C25DA0A98E6EBA38211CE542 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		CA1FE7DE1BC605C100E49359 /* Dropbox */ = {
-			isa = PBXGroup;
-			children = (
-				CA1FE7E21BC605EF00E49359 /* DropboxManager.h */,
-				CA1FE7E31BC605EF00E49359 /* DropboxManager.m */,
-			);
-			name = Dropbox;
 			sourceTree = "<group>";
 		};
 		DD1FFCCA1B50B9C100620C7F = {
@@ -258,7 +246,6 @@
 		DD2F5E921B5166BC00C020E1 /* BackSystem */ = {
 			isa = PBXGroup;
 			children = (
-				CA1FE7DE1BC605C100E49359 /* Dropbox */,
 				DD2F5E941B5166E000C020E1 /* AWS */,
 			);
 			name = BackSystem;
@@ -499,7 +486,6 @@
 				DDF128111B51EEB400AF298A /* CMCustomer.m in Sources */,
 				DDF1284B1B52103600AF298A /* CMCSVParser.m in Sources */,
 				DDF128451B520E2600AF298A /* Brain.m in Sources */,
-				CA1FE7E41BC605EF00E49359 /* DropboxManager.m in Sources */,
 				DDF128481B520E8100AF298A /* VDCustomerList.m in Sources */,
 				DDF1280E1B51EEA200AF298A /* CMUser.m in Sources */,
 				DD1FFD041B50BA6E00620C7F /* main.m in Sources */,
