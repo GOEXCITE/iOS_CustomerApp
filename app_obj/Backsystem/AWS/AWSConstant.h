@@ -8,6 +8,8 @@
 
 #import <AWSCore.h>
 
+//sdb.amazonaws.com
+
 #define ACCESS_KEY_ID               @"AKIAIJ37HNDPBT5MO2PQ"
 #define SECRET_KEY                  @"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"
 

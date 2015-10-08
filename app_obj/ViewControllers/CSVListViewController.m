@@ -11,6 +11,8 @@
 #import "Unities.h"
 #import "UIColor+CMExtension.h"
 
+#import "DropboxManager.h"
+
 //#define csvFilePath         @"file:///Users/tiantian/Desktop/sam.csv"
 @interface CSVListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *csvFileList;
@@ -30,10 +32,15 @@
     [title sizeToFit];
     self.navigationItem.titleView = title;
     
-    [AWSS3Communicator getFileListInS3WithFrefixKey:@"CustomerDataCSV/" executor:[AWSExecutor mainThreadExecutor] completionBlock:^(NSArray *csvFileList){
-        self.csvFileList = csvFileList;
-        [self.csvTable reloadData];
-    }];
+    
+    [[DropboxManager shared] setAutoUnlinkSessions:YES];
+    [[DropboxManager shared] linkSessionAndShow];
+    
+    
+//    [AWSS3Communicator getFileListInS3WithFrefixKey:@"CustomerDataCSV/" executor:[AWSExecutor mainThreadExecutor] completionBlock:^(NSArray *csvFileList){
+//        self.csvFileList = csvFileList;
+//        [self.csvTable reloadData];
+//    }];
     self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
