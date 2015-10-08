@@ -14,8 +14,9 @@
 #import "DropboxManager.h"
 
 //#define csvFilePath         @"file:///Users/tiantian/Desktop/sam.csv"
-@interface CSVListViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface CSVListViewController () <UITableViewDataSource, UITableViewDelegate,DBRestClientDelegate>
 @property (nonatomic, strong) NSArray *csvFileList;
+@property (nonatomic, strong) DBRestClient  *restClient;
 @end
 
 @implementation CSVListViewController
@@ -32,18 +33,41 @@
     [title sizeToFit];
     self.navigationItem.titleView = title;
     
-    
-    [[DropboxManager shared] setAutoUnlinkSessions:YES];
-//    [[DropboxManager shared] linkSessionAndShow];
-    if (![[DBSession sharedSession] isLinked]) {
+    if ([[DBSession sharedSession] isLinked]) {
         [[DBSession sharedSession] linkFromController:self.navigationController];
     }
+//    self.restClient.delegate = self;
+//    [self.restClient loadMetadata:@"/_william_customerData/"];
+    
+//    [[DropboxManager shared] setAutoUnlinkSessions:YES];
+//    [[DropboxManager shared] linkSessionAndShow];
+//    [[DropboxManager shared] startDropboxSession];
+//    if (![[DBSession sharedSession] isLinked]) {
+//        [[DBSession sharedSession] linkFromController:self.navigationController];
+//    }
+    https://www.dropbox.com/1/oauth2/authorize?client_id=hk37pzci0h7d0e5&response_type=code&redirect_uri=<redirect URI>&state=<CSRF token>
+//    NSURL *url = [NSURL URLWithString:@"https://www.dropbox.com/sh/5v2yu3t4ir95ctz/AABSbfSwui1B93sS-_p7JX5Aa?dl=0"];
+//    [[DBSession sharedSession] handleOpenURL:url];
     
 //    [AWSS3Communicator getFileListInS3WithFrefixKey:@"CustomerDataCSV/" executor:[AWSExecutor mainThreadExecutor] completionBlock:^(NSArray *csvFileList){
 //        self.csvFileList = csvFileList;
 //        [self.csvTable reloadData];
 //    }];
     self.navigationItem.rightBarButtonItem.enabled = NO;
+}
+
+- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
+    if (metadata.isDirectory) {
+        NSLog(@"Folder '%@' contains:", metadata.path);
+        for (DBMetadata *file in metadata.contents) {
+            NSLog(@"	%@", file.filename);
+        }
+    }
+}
+
+- (void)restClient:(DBRestClient *)client
+loadMetadataFailedWithError:(NSError *)error {
+    NSLog(@"Error loading metadata: %@", error);
 }
 
 - (IBAction)saveCSVToSDB:(id)sender{
