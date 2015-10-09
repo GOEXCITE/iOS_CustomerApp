@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barTintColor = [UIColor tm2_StandardBlue];
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectZero];
     title.font = [UIFont boldSystemFontOfSize:16.0];

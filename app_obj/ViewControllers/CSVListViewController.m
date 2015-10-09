@@ -11,12 +11,10 @@
 #import "Unities.h"
 #import "UIColor+CMExtension.h"
 
-#import "DropboxManager.h"
-
 //#define csvFilePath         @"file:///Users/tiantian/Desktop/sam.csv"
-@interface CSVListViewController () <UITableViewDataSource, UITableViewDelegate,DBRestClientDelegate>
+@interface CSVListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *csvFileList;
-@property (nonatomic, strong) DBRestClient  *restClient;
+
 @end
 
 @implementation CSVListViewController
@@ -29,46 +27,27 @@
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectZero];
     title.font = [UIFont boldSystemFontOfSize:16.0];
     title.textColor = [UIColor whiteColor];
-    title.text = @"顾客列表";
+    title.text = @"文件列表";
     [title sizeToFit];
     self.navigationItem.titleView = title;
     
-    if ([[DBSession sharedSession] isLinked]) {
-        [[DBSession sharedSession] linkFromController:self.navigationController];
-    }
-//    self.restClient.delegate = self;
-//    [self.restClient loadMetadata:@"/_william_customerData/"];
+    [DropboxHandler shared].completionBlock = ^(BOOL successed){
+        if (successed) {
+            self.csvFileList = [DropboxHandler shared].csvList;
+            [self.csvTable reloadData];
+        }else{
+            NSLog(@"Failed to loaded csv list from dropbox!");
+        }
+    };
+    [[DBSession sharedSession] linkFromController:self.navigationController];
     
-//    [[DropboxManager shared] setAutoUnlinkSessions:YES];
-//    [[DropboxManager shared] linkSessionAndShow];
-//    [[DropboxManager shared] startDropboxSession];
-//    if (![[DBSession sharedSession] isLinked]) {
-//        [[DBSession sharedSession] linkFromController:self.navigationController];
-//    }
-    https://www.dropbox.com/1/oauth2/authorize?client_id=hk37pzci0h7d0e5&response_type=code&redirect_uri=<redirect URI>&state=<CSRF token>
-//    NSURL *url = [NSURL URLWithString:@"https://www.dropbox.com/sh/5v2yu3t4ir95ctz/AABSbfSwui1B93sS-_p7JX5Aa?dl=0"];
-//    [[DBSession sharedSession] handleOpenURL:url];
-    
-//    [AWSS3Communicator getFileListInS3WithFrefixKey:@"CustomerDataCSV/" executor:[AWSExecutor mainThreadExecutor] completionBlock:^(NSArray *csvFileList){
-//        self.csvFileList = csvFileList;
-//        [self.csvTable reloadData];
-//    }];
     self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
-- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
-    if (metadata.isDirectory) {
-        NSLog(@"Folder '%@' contains:", metadata.path);
-        for (DBMetadata *file in metadata.contents) {
-            NSLog(@"	%@", file.filename);
-        }
-    }
+- (IBAction)refreshCSVList:(id)sender {
+    [[DropboxHandler shared] loadCSVFiles];
 }
 
-- (void)restClient:(DBRestClient *)client
-loadMetadataFailedWithError:(NSError *)error {
-    NSLog(@"Error loading metadata: %@", error);
-}
 
 - (IBAction)saveCSVToSDB:(id)sender{
     UIActivityIndicatorView *indi = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -165,6 +144,67 @@ loadMetadataFailedWithError:(NSError *)error {
 //    NSNumber *flag = (NSNumber *)[_csvFileParsed objectAtIndex:indexPath.row];
 //    cell.accessoryType = flag.boolValue;
     return cell;
+}
+
+@end
+
+@interface DropboxHandler () <DBRestClientDelegate>
+
+@property (nonatomic, strong) DBRestClient  *restClient;
+
+
+
+@end
+
+@implementation DropboxHandler
+
++ (instancetype)shared{
+    static DropboxHandler *sharedClass = nil;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        sharedClass = [[DropboxHandler alloc] init];
+    });
+    return sharedClass;
+}
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        DBSession *session = [[DBSession alloc] initWithAppKey:DROPBOX_APP_KEY appSecret:DROPBOX_APP_SECRET root:kDBRootDropbox];
+        [DBSession setSharedSession:session];
+        if (![DBSession sharedSession].isLinked) {
+            NSLog(@"Dropbox DBSession unlinked!");
+        }
+        return  self;
+    }
+    return nil;
+}
+
+- (void)loadCSVFiles{
+    self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+    self.restClient.delegate = self;
+    [self.restClient loadMetadata:@"/_customerData"];
+}
+
+- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
+    if (metadata.isDirectory) {
+        NSLog(@"Folder '%@' contains:", metadata.path);
+        NSMutableArray *array = [NSMutableArray new];
+        for (DBMetadata *file in metadata.contents) {
+            NSLog(@"%@ \n", file.filename);
+            [array addObject:file.filename];
+        }
+        self.csvList = (NSArray *)array;
+        self.completionBlock(YES);
+    }else{
+        self.completionBlock(NO);
+    }
+}
+
+- (void)restClient:(DBRestClient *)client loadMetadataFailedWithError:(NSError *)error {
+    NSLog(@"Error loading metadata: %@", error);
+    self.completionBlock(NO);
 }
 
 @end

@@ -40,7 +40,7 @@
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectZero];
     title.font = [UIFont boldSystemFontOfSize:16.0];
     title.textColor = [UIColor whiteColor];
-    title.text = @"顾客列表";
+    title.text = @"添加";
     [title sizeToFit];
     self.navigationItem.titleView = title;
 }
@@ -97,11 +97,6 @@
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"保存成功" message:@"已经成功将用户添加到数据库和列表中！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
-            
-            UIViewController *vc = [[UIStoryboard storyboardWithName:@"iPhoneMain" bundle: nil] instantiateViewControllerWithIdentifier: @"CustomerListViewController"];
-//            [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
-//                                                                     withSlideOutAnimation:YES
-//                                                                             andCompletion:nil];
         }];
     }];
     

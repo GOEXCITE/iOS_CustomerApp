@@ -64,7 +64,10 @@
                             <constraint firstItem="tHt-bE-kXB" firstAttribute="leading" secondItem="lyS-qH-We4" secondAttribute="leading" id="nVj-zF-duw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ja5-9w-1Hg"/>
+                    <navigationItem key="navigationItem" id="ja5-9w-1Hg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="7xz-gU-aIy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Cbu-uO-Cr3"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="customerTable" destination="tHt-bE-kXB" id="GIG-VN-HNC"/>
                         <outlet property="searchDisplayController" destination="aho-mA-Fy9" id="dHY-4E-3Hq"/>
@@ -110,7 +113,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="10" sectionFooterHeight="10" id="ciX-Ox-q51">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="LRN-Qj-mW7">
                                 <cells>
@@ -147,7 +150,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="Wbc-p8-e2q" secondAttribute="trailing" constant="9" id="pGT-3x-Xdo"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="8Kf-Du-2WO">
                                         <rect key="frame" x="0.0" y="159" width="414" height="60"/>
@@ -182,7 +184,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="AIg-ph-8U8" secondAttribute="bottom" constant="9.5" id="zuv-1y-8iQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="WoE-jd-FN6">
                                         <rect key="frame" x="0.0" y="219" width="414" height="60"/>
@@ -216,7 +217,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="r4G-8s-Cc6" secondAttribute="bottom" constant="15.5" id="cMC-A6-f8z"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="HDl-AZ-1aK">
                                         <rect key="frame" x="0.0" y="279" width="414" height="60"/>
@@ -257,7 +257,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="8ua-Bs-WIY" secondAttribute="trailing" constant="9" id="edl-t4-imZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="vqc-X2-klv">
                                         <rect key="frame" x="0.0" y="339" width="414" height="60"/>
@@ -292,7 +291,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="vyC-xU-VlG" secondAttribute="bottom" constant="4.5" id="s1L-RW-3IT"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="sSL-zb-LNY">
                                         <rect key="frame" x="0.0" y="399" width="414" height="60"/>
@@ -327,7 +325,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="oXE-2b-dN9" secondAttribute="trailing" constant="9" id="OWx-fa-frg"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="XmE-6N-W6h">
                                         <rect key="frame" x="0.0" y="459" width="414" height="60"/>
@@ -362,7 +359,6 @@
                                                 <constraint firstItem="iO6-Sb-cIb" firstAttribute="top" secondItem="rpf-MC-v4I" secondAttribute="top" constant="5" id="lBG-OC-Of9"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="hgr-NS-hRD">
                                         <rect key="frame" x="0.0" y="519" width="414" height="60"/>
@@ -403,7 +399,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="RO4-LZ-fOx" secondAttribute="trailing" constant="9" id="yHI-uz-mbU"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="EHg-eF-Aj1">
                                         <rect key="frame" x="0.0" y="579" width="414" height="60"/>
@@ -438,7 +433,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="usN-dB-Ffv" secondAttribute="trailing" constant="9" id="fYW-NA-g1Y"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Cv5-ue-nia">
                                         <rect key="frame" x="0.0" y="639" width="414" height="60"/>
@@ -473,7 +467,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="aSZ-H9-Vqq" secondAttribute="bottom" constant="4.5" id="ZIr-fq-er3"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Bdd-Ak-Icl">
                                         <rect key="frame" x="0.0" y="699" width="414" height="60"/>
@@ -508,7 +501,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="lgn-y8-33B" secondAttribute="trailing" constant="9" id="lJw-XG-rP9"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -519,6 +511,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4kD-0d-l8N">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Mwu-C0-WQd"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="cuP-Pd-u4T">
                             <connections>
                                 <action selector="saveToSDB:" destination="7Oj-SE-D7y" id="Qtn-E0-rzd"/>
@@ -602,6 +595,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KnG-Ty-SEu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="9Sv-Uy-0SL">
+                            <connections>
+                                <action selector="refreshCSVList:" destination="vIb-UJ-ZaZ" id="jBY-xV-OXU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="读取" id="mIa-Bh-l5Q">
                             <connections>
                                 <action selector="saveCSVToSDB:" destination="vIb-UJ-ZaZ" id="oM5-6R-fYe"/>
@@ -1055,7 +1053,7 @@
         <scene sceneID="VTH-L6-gT3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B8p-1r-3gv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="顾客列表" id="0Su-we-oql"/>
+                    <tabBarItem key="tabBarItem" title="顾客列表" image="icon_home" id="0Su-we-oql"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JBF-2z-vPX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1074,7 +1072,7 @@
         <scene sceneID="kOR-AE-dQq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3cV-0v-Dmq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="添加" id="bCU-XT-tns"/>
+                    <tabBarItem key="tabBarItem" title="添加" image="icon_add" id="bCU-XT-tns"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZDE-F9-6nY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1093,7 +1091,7 @@
         <scene sceneID="oFo-PH-Eza">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zTs-9H-7hS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="原始文件列表" id="OQK-PF-F4Z"/>
+                    <tabBarItem key="tabBarItem" title="原始文件列表" image="icon_list" id="OQK-PF-F4Z"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JlR-Qg-aM1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1109,6 +1107,11 @@
             <point key="canvasLocation" x="1802.5" y="883.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_add" width="32" height="32"/>
+        <image name="icon_home" width="32" height="32"/>
+        <image name="icon_list" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Fa-Q0-bpn"/>
     </inferredMetricsTieBreakers>

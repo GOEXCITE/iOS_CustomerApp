@@ -10,7 +10,7 @@
 
 #import "Brain.h"
 
-#import "DropboxManager.h"
+#import "CSVListViewController.h"
 
 //<key>NSAppTransportSecurity</key>
 //<dict>
@@ -28,12 +28,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    DBSession *dbSession = [[DBSession alloc]
-                            initWithAppKey:DROPBOX_APP_KEY
-                            appSecret:DROPBOX_APP_SECRET
-                            root:kDBRootDropbox]; // either kDBRootAppFolder or kDBRootDropbox
-    [DBSession setSharedSession:dbSession];
-    
     // Set the initial view controller to be the root view controller of the window object
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"iPhoneMain" bundle:nil];
     UIViewController *initialViewController = storyBoard.instantiateInitialViewController;
@@ -50,28 +44,13 @@
         if ([[DBSession sharedSession] isLinked]) {
             NSLog(@"App linked successfully!");
             // At this point you can start making API calls
-            self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
-            self.restClient.delegate = self;
-            [self.restClient loadMetadata:@"/"];
-            
+            [[DropboxHandler shared] loadCSVFiles];
         }
         return YES;
     }
     return NO;
 }
 
-- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
-    if (metadata.isDirectory) {
-        NSLog(@"Folder '%@' contains:", metadata.path);
-        for (DBMetadata *file in metadata.contents) {
-            NSLog(@"	%@", file.filename);
-        }
-    }
-}
 
-- (void)restClient:(DBRestClient *)client
-loadMetadataFailedWithError:(NSError *)error {
-    NSLog(@"Error loading metadata: %@", error);
-}
 
 @end
