@@ -44,7 +44,7 @@
         if ([[DBSession sharedSession] isLinked]) {
             NSLog(@"App linked successfully!");
             // At this point you can start making API calls
-            [[DropboxHandler shared] loadCSVFiles];
+            [[DropboxHandler shared] loadCSVFileList];
         }
         return YES;
     }

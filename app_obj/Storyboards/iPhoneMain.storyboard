@@ -19,7 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="tHt-bE-kXB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="customerTableCell" editingAccessoryType="disclosureIndicator" textLabel="mXI-6v-ZeC" detailTextLabel="qVx-gL-3va" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Lvp-Vg-xzj">
                                         <rect key="frame" x="0.0" y="113.5" width="375" height="60"/>
@@ -65,8 +65,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ja5-9w-1Hg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="7xz-gU-aIy"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Cbu-uO-Cr3"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="7xz-gU-aIy">
+                            <connections>
+                                <action selector="search:" destination="wq8-Dm-aKO" id="R46-3T-AkV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Cbu-uO-Cr3">
+                            <connections>
+                                <action selector="refresh:" destination="wq8-Dm-aKO" id="Sbe-E0-idH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="customerTable" destination="tHt-bE-kXB" id="GIG-VN-HNC"/>
@@ -113,7 +121,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="10" sectionFooterHeight="10" id="ciX-Ox-q51">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="LRN-Qj-mW7">
                                 <cells>
@@ -511,7 +519,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4kD-0d-l8N">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Mwu-C0-WQd"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Mwu-C0-WQd">
+                            <connections>
+                                <action selector="cancel:" destination="7Oj-SE-D7y" id="fbc-HJ-dWU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="cuP-Pd-u4T">
                             <connections>
                                 <action selector="saveToSDB:" destination="7Oj-SE-D7y" id="Qtn-E0-rzd"/>
@@ -621,7 +633,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="10" sectionFooterHeight="10" id="B7N-gD-QSl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="IhW-DN-Ncn">
                                 <cells>
@@ -925,9 +937,16 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="fvB-oj-JvC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日期的输入格式为 2000/01/01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ldW-dN-2gn">
+                            <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dVA-xv-gis">
-                            <rect key="frame" x="0.0" y="169" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="178" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -937,7 +956,7 @@
                             <tableViewSection id="yHN-ui-dUz">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="CEt-SS-ygG">
-                                        <rect key="frame" x="0.0" y="99" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="108" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CEt-SS-ygG" id="7EK-bT-sqY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
@@ -991,7 +1010,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="10" id="eFh-gK-8JA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="searchResultTableCell" textLabel="JFW-9Q-8Tb" detailTextLabel="miU-rc-WcE" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="tPU-Zb-WVD">
                                 <rect key="frame" x="0.0" y="113.5" width="414" height="60"/>

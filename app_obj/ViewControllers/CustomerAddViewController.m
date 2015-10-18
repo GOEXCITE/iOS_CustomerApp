@@ -45,13 +45,10 @@
     self.navigationItem.titleView = title;
 }
 
-- (BOOL)slideNavigationControllerShouldDisplayLeftMenu{
-    return YES;
+- (IBAction)cancel:(id)sender {
+    [self.view endEditing:YES];
 }
 
-- (BOOL)slideNavigationControllerShouldDisplayRightMenu{
-    return NO;
-}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     return [textField resignFirstResponder];

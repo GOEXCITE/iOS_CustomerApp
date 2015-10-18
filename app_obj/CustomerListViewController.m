@@ -62,12 +62,16 @@
     }];
 }
 
-- (BOOL)slideNavigationControllerShouldDisplayLeftMenu{
-    return YES;
+- (IBAction)search:(id)sender {
+    [self.searchController setEditing:YES animated:YES];
 }
 
-- (BOOL)slideNavigationControllerShouldDisplayRightMenu{
-    return NO;
+- (IBAction)refresh:(id)sender {
+    [[VDCustomerList sharedInstance] refreshWithCompletionBlock:^(BOOL successed){
+        if (successed) {
+            [self.customerTable reloadData];
+        }
+    }];
 }
 
 //! @function Table
