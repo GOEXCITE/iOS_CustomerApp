@@ -10,6 +10,7 @@
 #import "Brain.h"
 #import "CustomerDetailViewController.h"
 #import "Unities.h"
+#import "UIColor+CMExtension.h"
 
 @interface CustomerEditViewController () <UITextFieldDelegate,UINavigationControllerDelegate>
 
@@ -22,7 +23,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.editingCustomer.customerName;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor tm2_StandardBlue];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectZero];
+    title.font = [UIFont boldSystemFontOfSize:16.0];
+    title.textColor = [UIColor whiteColor];
+    title.text = self.editingCustomer.customerName;
+    [title sizeToFit];
+    self.navigationItem.titleView = title;
+    
+//    self.title = self.editingCustomer.customerName;
     self.navigationController.delegate = self;
     
     self.titleLabel.text = self.editTitle;
@@ -66,7 +76,7 @@
     }else if ([self.titleLabel.text isEqualToString:@"年龄"]) {
         self.editingCustomer.age = self.editField.text;
         
-        NSString *frontPart = [NSString stringWithFormat:@"%d",[NSDate date].getyyyy.integerValue-self.editField.text.integerValue];
+        NSString *frontPart = [NSString stringWithFormat:@"%ld",[NSDate date].getyyyy.integerValue-self.editField.text.integerValue];
         NSString *backPart = self.editingCustomer.birth.length==10 ? [self.editingCustomer.birth substringFromIndex:4] : @"/--/--";
         self.editingCustomer.birth = [frontPart stringByAppendingString:backPart];
     }else if ([self.titleLabel.text isEqualToString:@"护照号码"]) {
@@ -81,6 +91,9 @@
         self.editingCustomer.phoneNumber = self.editField.text;
     }else if ([self.titleLabel.text isEqualToString:@"mail"]) {
         self.editingCustomer.mail = self.editField.text;
+    }
+    else if ([self.titleLabel.text isEqualToString:@"WechatID"]) {
+        self.editingCustomer.wechatID = self.editField.text;
     }
     [self.editingCustomer saveWithExecutor:[AWSExecutor mainThreadExecutor] CompletionBlock:^(BOOL successed){
         NSLog(successed ? @"save customer Data to SDB successed":@"Failed to save customer data to SDB");

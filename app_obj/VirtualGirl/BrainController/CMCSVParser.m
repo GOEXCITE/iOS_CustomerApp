@@ -88,6 +88,9 @@
         new.location = [anItem objectAtIndex:8];
         new.phoneNumber = [anItem objectAtIndex:9];
         new.mail = [anItem objectAtIndex:10];
+        new.wechatID = [anItem objectAtIndex:11];
+        new.history = [anItem objectAtIndex:12];
+        new.remark = [anItem objectAtIndex:13];
         [customerArray addObject:new];
     }
     self.lines = nil;

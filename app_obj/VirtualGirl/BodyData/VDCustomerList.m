@@ -33,12 +33,13 @@
 - (AWSSimpleDBSelectRequest *)req{
     if (!_req) {
         _req = [[AWSSimpleDBSelectRequest alloc] init];
-        _req.selectExpression = [NSString stringWithFormat:@"select * from %@ where isDeleted is null",DOMAIN_CUSTOMER];
+        _req.selectExpression = [NSString stringWithFormat:@"select * from %@ where isDeleted != '1' or isDeleted is null",DOMAIN_CUSTOMER];
     }
     return _req;
 }
 
 - (void)refreshWithCompletionBlock:(void (^)(BOOL successed))block{
+//    self.customerList = [NSMutableArray array];
     [[[[AWSSDBCommunicator sharedInstance] sdb] select:self.req] continueWithExecutor:[AWSExecutor mainThreadExecutor] withBlock:^id(AWSTask *task){
         if (task.error !=nil) {
             NSLog(@"ERROR : %@",task.error);

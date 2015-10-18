@@ -28,6 +28,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *mailField;
 
+@property (weak, nonatomic) IBOutlet UITextField *wechatIDField;
+@property (weak, nonatomic) IBOutlet UITextField *historyField;
+@property (weak, nonatomic) IBOutlet UITextField *remarkField;
+
 @end
 
 @implementation CustomerAddViewController
@@ -48,7 +52,6 @@
 - (IBAction)cancel:(id)sender {
     [self.view endEditing:YES];
 }
-
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     return [textField resignFirstResponder];
@@ -86,6 +89,10 @@
     new.location = self.locationField.text;
     new.phoneNumber = self.phoneNumberField.text;
     new.mail = self.mailField.text;
+    new.wechatID = self.wechatIDField.text;
+    new.history = self.historyField.text;
+    new.remark = self.remarkField.text;
+    
     [AWSSDBCommunicator getCountFromSDBWithDomainName:DOMAIN_CUSTOMER completionBlock:^(NSString *count){
         new.customerId = count;
         [new saveWithExecutor:[AWSExecutor mainThreadExecutor] CompletionBlock:^(BOOL successed){
