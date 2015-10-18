@@ -89,6 +89,24 @@
     anAtt.replace = [NSNumber numberWithBool:YES];
     [setAttributes addObject:anAtt];
     
+    anAtt = [[AWSSimpleDBReplaceableAttribute alloc] init];
+    anAtt.name = @"wechatID";
+    anAtt.value = _wechatID != nil ? _wechatID : @"";
+    anAtt.replace = [NSNumber numberWithBool:YES];
+    [setAttributes addObject:anAtt];
+    
+    anAtt = [[AWSSimpleDBReplaceableAttribute alloc] init];
+    anAtt.name = @"history";
+    anAtt.value = _history != nil ? _history : @"";
+    anAtt.replace = [NSNumber numberWithBool:YES];
+    [setAttributes addObject:anAtt];
+    
+    anAtt = [[AWSSimpleDBReplaceableAttribute alloc] init];
+    anAtt.name = @"remark";
+    anAtt.value = _remark != nil ? _remark : @"";
+    anAtt.replace = [NSNumber numberWithBool:YES];
+    [setAttributes addObject:anAtt];
+    
     req.attributes = (NSArray *)setAttributes;
     [[[AWSSDBCommunicator sharedInstance].sdb putAttributes:req] continueWithExecutor:executor withBlock:^id(AWSTask *task){
         if (task.error != nil) {

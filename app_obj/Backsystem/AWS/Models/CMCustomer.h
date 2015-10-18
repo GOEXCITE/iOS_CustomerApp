@@ -26,6 +26,10 @@
 @property (nonatomic ,strong) NSString  *phoneNumber;
 @property (nonatomic ,strong) NSString  *mail;
 
+@property (nonatomic ,strong) NSString  *wechatID;
+@property (nonatomic ,strong) NSString  *history;
+@property (nonatomic ,strong) NSString  *remark;
+
 - (void)saveWithExecutor:(AWSExecutor *)executor CompletionBlock:(void (^)(BOOL success))block;
 
 @end

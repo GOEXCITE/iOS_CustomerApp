@@ -15,7 +15,7 @@
 +(void)getCountFromSDBWithDomainName:(NSString *)domainName key:(NSString *)theKey value:(NSString *)theValue completionBlock:(void(^)(NSString *count))complectionBlock;
 +(void)getItemListFromSDBWithDomainName:(NSString *)domainName condition:(NSString *)condition mainThreadExecutor:(BOOL)mainExecutor  completionBlock:(void(^)(NSArray *itemList))complectionBlock;     // retune AWSSimpleDBItem array
 +(void)updateValueToSDBWithDomainName:(NSString *)domainName itemName:(NSString *)itemName Key:(NSString *)theKey value:(NSString *)theValue withMainThreadExecutor:(BOOL)mainExecutor completionBlock:(void(^)(BOOL finished))complectionBlock;
-+(void)removeSDBItemWithDomainName:(NSString *)domainName itemName:(NSString *)itemName completionBlock:(void(^)(BOOL successed))complectionBlock;
++(void)removeSDBItemWithDomainName:(NSString *)domainName itemName:(NSString *)itemName mainThreadExecutor:(BOOL)isMain completionBlock:(void(^)(BOOL successed))complectionBlock;
 
 #pragma - unities
 +(NSString *)getValueForAttribute:(NSString *)theAttribute fromList:(NSArray *)attributeList;

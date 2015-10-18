@@ -184,12 +184,14 @@
 
 //! @function Delete Item
 
-+(void)removeSDBItemWithDomainName:(NSString *)domainName itemName:(NSString *)itemName completionBlock:(void(^)(BOOL successed))complectionBlock{
++(void)removeSDBItemWithDomainName:(NSString *)domainName itemName:(NSString *)itemName mainThreadExecutor:(BOOL)isMain completionBlock:(void(^)(BOOL successed))complectionBlock{
     AWSSimpleDBDeleteAttributesRequest *req = [[AWSSimpleDBDeleteAttributesRequest alloc] init];
     req.domainName = domainName;
     req.itemName = itemName;
     
-    [[[[AWSSDBCommunicator sharedInstance] sdb] deleteAttributes:req] continueWithSuccessBlock:^id(AWSTask *task){
+    AWSExecutor *useExe = isMain ? [AWSExecutor mainThreadExecutor] : [AWSExecutor defaultExecutor];
+    
+    [[[[AWSSDBCommunicator sharedInstance] sdb] deleteAttributes:req] continueWithExecutor:useExe withBlock:^id(AWSTask *task){
         if (task.error != nil) {
             if(task.error.code != AWSS3TransferManagerErrorCancelled && task.error.code != AWSS3TransferManagerErrorPaused){
                 NSLog(@"%s Error: [%@]",__PRETTY_FUNCTION__, task.error);

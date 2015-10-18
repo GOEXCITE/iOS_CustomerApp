@@ -55,7 +55,12 @@
     
     self.definesPresentationContext = YES;
     
+    UIActivityIndicatorView *indiView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    indiView.center =self.view.center;
+    [self.view addSubview:indiView];
+    [indiView startAnimating];
     [[VDCustomerList sharedInstance] refreshWithCompletionBlock:^(BOOL successed){
+        [indiView stopAnimating];
         if (successed) {
             [self.customerTable reloadData];
         }
@@ -67,7 +72,14 @@
 }
 
 - (IBAction)refresh:(id)sender {
+    [VDCustomerList sharedInstance].customerList = [NSMutableArray array];
+    
+    UIActivityIndicatorView *indiView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    indiView.center =self.view.center;
+    [self.view addSubview:indiView];
+    [indiView startAnimating];
     [[VDCustomerList sharedInstance] refreshWithCompletionBlock:^(BOOL successed){
+        [indiView stopAnimating];
         if (successed) {
             [self.customerTable reloadData];
         }

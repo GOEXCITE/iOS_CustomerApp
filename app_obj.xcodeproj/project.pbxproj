@@ -28,6 +28,7 @@
 		DD6B1E581BCEA12200C83FEB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6B1E571BCEA12200C83FEB /* Security.framework */; };
 		DD6B1E5C1BCEA30500C83FEB /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6B1E5B1BCEA30500C83FEB /* DropboxSDK.framework */; settings = {ASSET_TAGS = (); }; };
 		DD87410E1B54014300FB5DEA /* Unities.m in Sources */ = {isa = PBXBuildFile; fileRef = DD87410D1B54014300FB5DEA /* Unities.m */; };
+		DDCF39051BD3C9A30061B6E9 /* CustomerTextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCF39041BD3C9A30061B6E9 /* CustomerTextEditViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DDF1280E1B51EEA200AF298A /* CMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF1280D1B51EEA200AF298A /* CMUser.m */; };
 		DDF128111B51EEB400AF298A /* CMCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF128101B51EEB400AF298A /* CMCustomer.m */; };
 		DDF128141B51EEC600AF298A /* CMCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF128131B51EEC600AF298A /* CMCSV.m */; };
@@ -89,6 +90,8 @@
 		DD6B1E5B1BCEA30500C83FEB /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		DD87410C1B54014300FB5DEA /* Unities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unities.h; path = Unities/Unities.h; sourceTree = "<group>"; };
 		DD87410D1B54014300FB5DEA /* Unities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unities.m; path = Unities/Unities.m; sourceTree = "<group>"; };
+		DDCF39031BD3C9A30061B6E9 /* CustomerTextEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerTextEditViewController.h; path = ViewControllers/CustomerTextEditViewController.h; sourceTree = "<group>"; };
+		DDCF39041BD3C9A30061B6E9 /* CustomerTextEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerTextEditViewController.m; path = ViewControllers/CustomerTextEditViewController.m; sourceTree = "<group>"; };
 		DDF1280C1B51EEA200AF298A /* CMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMUser.h; path = Backsystem/AWS/Models/CMUser.h; sourceTree = "<group>"; };
 		DDF1280D1B51EEA200AF298A /* CMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMUser.m; path = Backsystem/AWS/Models/CMUser.m; sourceTree = "<group>"; };
 		DDF1280F1B51EEB400AF298A /* CMCustomer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCustomer.h; path = Backsystem/AWS/Models/CMCustomer.h; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				DDFD77741B529E8C00AACA0E /* CustomerDetailViewController.m */,
 				DD2040101B5BF1EA007D706B /* CustomerEditViewController.h */,
 				DD2040111B5BF1EA007D706B /* CustomerEditViewController.m */,
+				DDCF39031BD3C9A30061B6E9 /* CustomerTextEditViewController.h */,
+				DDCF39041BD3C9A30061B6E9 /* CustomerTextEditViewController.m */,
 				DD2F5E831B50CC2100C020E1 /* CustomerAddViewController.h */,
 				DD2F5E841B50CC2100C020E1 /* CustomerAddViewController.m */,
 				DD2F5E8F1B50E9E600C020E1 /* CSVListViewController.h */,
@@ -476,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCF39051BD3C9A30061B6E9 /* CustomerTextEditViewController.m in Sources */,
 				DD2F5E911B50E9E600C020E1 /* CSVListViewController.m in Sources */,
 				DD2F5E851B50CC2100C020E1 /* CustomerAddViewController.m in Sources */,
 				DDF128411B520E1500AF298A /* VDOwner.m in Sources */,
