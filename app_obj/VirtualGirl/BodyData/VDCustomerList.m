@@ -33,7 +33,7 @@
 - (AWSSimpleDBSelectRequest *)req{
     if (!_req) {
         _req = [[AWSSimpleDBSelectRequest alloc] init];
-        _req.selectExpression = [NSString stringWithFormat:@"select * from %@ where deletedDate is null",DOMAIN_CUSTOMER];
+        _req.selectExpression = [NSString stringWithFormat:@"select * from %@ where isDeleted is null",DOMAIN_CUSTOMER];
     }
     return _req;
 }

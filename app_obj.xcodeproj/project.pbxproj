@@ -24,6 +24,9 @@
 		DD2F5E881B50CCE900C020E1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E871B50CCE900C020E1 /* LoginViewController.m */; };
 		DD2F5E8E1B50DEA200C020E1 /* UIColor+CMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E8D1B50DEA200C020E1 /* UIColor+CMExtension.m */; };
 		DD2F5E911B50E9E600C020E1 /* CSVListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2F5E901B50E9E600C020E1 /* CSVListViewController.m */; };
+		DD6B1E561BCEA11900C83FEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6B1E551BCEA11900C83FEB /* QuartzCore.framework */; };
+		DD6B1E581BCEA12200C83FEB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6B1E571BCEA12200C83FEB /* Security.framework */; };
+		DD6B1E5C1BCEA30500C83FEB /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6B1E5B1BCEA30500C83FEB /* DropboxSDK.framework */; settings = {ASSET_TAGS = (); }; };
 		DD87410E1B54014300FB5DEA /* Unities.m in Sources */ = {isa = PBXBuildFile; fileRef = DD87410D1B54014300FB5DEA /* Unities.m */; };
 		DDF1280E1B51EEA200AF298A /* CMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF1280D1B51EEA200AF298A /* CMUser.m */; };
 		DDF128111B51EEB400AF298A /* CMCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF128101B51EEB400AF298A /* CMCustomer.m */; };
@@ -35,7 +38,6 @@
 		DDF128451B520E2600AF298A /* Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF128441B520E2600AF298A /* Brain.m */; };
 		DDF128481B520E8100AF298A /* VDCustomerList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF128471B520E8100AF298A /* VDCustomerList.m */; };
 		DDF1284B1B52103600AF298A /* CMCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF1284A1B52103600AF298A /* CMCSVParser.m */; };
-		DDF660961BC6B36C006EEC1F /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF660951BC6B36C006EEC1F /* DropboxSDK.framework */; settings = {ASSET_TAGS = (); }; };
 		DDFD77751B529E8C00AACA0E /* CustomerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFD77741B529E8C00AACA0E /* CustomerDetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,9 @@
 		DD2F5E8D1B50DEA200C020E1 /* UIColor+CMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CMExtension.m"; path = "Layout/UIColor+CMExtension.m"; sourceTree = "<group>"; };
 		DD2F5E8F1B50E9E600C020E1 /* CSVListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSVListViewController.h; path = ViewControllers/CSVListViewController.h; sourceTree = "<group>"; };
 		DD2F5E901B50E9E600C020E1 /* CSVListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSVListViewController.m; path = ViewControllers/CSVListViewController.m; sourceTree = "<group>"; };
+		DD6B1E551BCEA11900C83FEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DD6B1E571BCEA12200C83FEB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DD6B1E5B1BCEA30500C83FEB /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		DD87410C1B54014300FB5DEA /* Unities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unities.h; path = Unities/Unities.h; sourceTree = "<group>"; };
 		DD87410D1B54014300FB5DEA /* Unities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unities.m; path = Unities/Unities.m; sourceTree = "<group>"; };
 		DDF1280C1B51EEA200AF298A /* CMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMUser.h; path = Backsystem/AWS/Models/CMUser.h; sourceTree = "<group>"; };
@@ -105,7 +110,6 @@
 		DDF128471B520E8100AF298A /* VDCustomerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VDCustomerList.m; path = VirtualGirl/BodyData/VDCustomerList.m; sourceTree = "<group>"; };
 		DDF128491B52103600AF298A /* CMCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCSVParser.h; path = VirtualGirl/BrainController/CMCSVParser.h; sourceTree = "<group>"; };
 		DDF1284A1B52103600AF298A /* CMCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCSVParser.m; path = VirtualGirl/BrainController/CMCSVParser.m; sourceTree = "<group>"; };
-		DDF660951BC6B36C006EEC1F /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		DDFD77731B529E8C00AACA0E /* CustomerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerDetailViewController.h; path = ViewControllers/CustomerDetailViewController.h; sourceTree = "<group>"; };
 		DDFD77741B529E8C00AACA0E /* CustomerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerDetailViewController.m; path = ViewControllers/CustomerDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +119,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF660961BC6B36C006EEC1F /* DropboxSDK.framework in Frameworks */,
+				DD6B1E5C1BCEA30500C83FEB /* DropboxSDK.framework in Frameworks */,
+				DD6B1E581BCEA12200C83FEB /* Security.framework in Frameworks */,
+				DD6B1E561BCEA11900C83FEB /* QuartzCore.framework in Frameworks */,
 				6B23FE6FFE49EAC8064E8FB2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +139,9 @@
 		6050BDC4E29E37E981F12AD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD6B1E5B1BCEA30500C83FEB /* DropboxSDK.framework */,
+				DD6B1E571BCEA12200C83FEB /* Security.framework */,
+				DD6B1E551BCEA11900C83FEB /* QuartzCore.framework */,
 				1AFE1DDA3D94A57693C0D0F6 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -184,7 +193,6 @@
 		DD1FFCD61B50B9C100620C7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DDF660951BC6B36C006EEC1F /* DropboxSDK.framework */,
 				DD1FFD0B1B50BBBD00620C7F /* iPadMain.storyboard */,
 				DD1FFCFF1B50BA6000620C7F /* Images.xcassets */,
 				DD1FFCE51B50B9C100620C7F /* LaunchScreen.xib */,
@@ -384,6 +392,7 @@
 					};
 					DD1FFCEB1B50B9C100620C7F = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 925TK3YHB9;
 						TestTargetID = DD1FFCD21B50B9C100620C7F;
 					};
 				};
@@ -542,6 +551,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tian Tian (ZGH64BYYHP)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -562,7 +572,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos9.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -587,6 +597,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: GOLDEN BRIDGE, K.K. (925TK3YHB9)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -599,7 +610,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos9.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -647,6 +659,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -659,6 +673,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.goexcite.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/app_obj.app/app_obj";
 			};
 			name = Debug;
@@ -667,6 +682,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -675,6 +692,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.goexcite.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/app_obj.app/app_obj";
 			};
 			name = Release;
