@@ -38,11 +38,33 @@
     [title sizeToFit];
     self.navigationItem.titleView = title;
     
-    [self getDropboxCSVFiles];
-    
-    [self getSDBCSVFiles];
-    
+    [self refreshCSVList:nil];
+}
+
+- (IBAction)refreshCSVList:(id)sender {
     self.navigationItem.rightBarButtonItem.enabled = NO;
+    
+    self.indi = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.indi.center = self.view.center;
+    [self.view addSubview:self.indi];
+    [self.indi startAnimating];
+    
+    [self getDropboxCSVFiles];
+    [self getSDBCSVFiles];
+}
+
+- (IBAction)saveCSVToSDB:(id)sender{
+    [self refreshCSVList:nil];
+    if (!self.filesNeedsParse.count > 0) {
+        return;
+    }
+    self.indi = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.indi.center = self.view.center;
+    [self.view addSubview:self.indi];
+    [self.indi startAnimating];
+    for (NSString *aFile in self.filesNeedsParse) {
+        [[DropboxHandler shared] loadCSVFile:aFile];
+    }
 }
 
 - (void)getDropboxCSVFiles{
@@ -102,16 +124,11 @@
         
         self.mergedCSVFileList = totalList.allObjects;
         self.filesNeedsParse = (NSArray *)parseList;
+        [self.indi stopAnimating];
+        
         [self.csvTable reloadData];
     }
 }
-
-- (IBAction)refreshCSVList:(id)sender {
-    self.navigationItem.rightBarButtonItem.enabled = NO;
-    [self getDropboxCSVFiles];
-    [self getSDBCSVFiles];
-}
-
 
 - (void)dropboxDownloadedFile:(NSString *)fullFilePath{
     NSLog(@"successed got file from Dropbox.");
@@ -156,19 +173,7 @@
     }];
 }
 
-- (IBAction)saveCSVToSDB:(id)sender{
-    [self refreshCSVList:nil];
-    if (!self.filesNeedsParse.count > 0) {
-        return;
-    }
-    self.indi = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    self.indi.center = self.view.center;
-    [self.view addSubview:self.indi];
-    [self.indi startAnimating];
-    for (NSString *aFile in self.filesNeedsParse) {
-        [[DropboxHandler shared] loadCSVFile:aFile];
-    }
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.mergedCSVFileList.count;
